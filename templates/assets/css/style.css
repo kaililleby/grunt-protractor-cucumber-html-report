@@ -493,13 +493,13 @@ header h1 {
 }
 
 @-webkit-keyframes hide_backdrop {
-     0% {
-         opacity: 0.6;
-     }
+    0% {
+        opacity: 0.6;
+    }
 
-     100% {
-         opacity: 0;
-     }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-moz-keyframes hide_backdrop {
@@ -731,4 +731,22 @@ header h1 {
     margin:0;
     padding: 10px;
 
+}
+
+
+.step_embeddings_html{}
+.step_embeddings_html .embedding_html {
+    background-color: #fff;
+}
+
+.step_embeddings_bilder {
+    display: flex;
+}
+
+.step_embeddings_bilder .embeddings_bilde {
+    padding:10px;
+}
+
+.step_embeddings_bilder .embeddings_bilde img {
+    width: 100%;
 }

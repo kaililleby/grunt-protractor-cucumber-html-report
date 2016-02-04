@@ -11,4 +11,18 @@
         </blockquote>
     </div>
     <% } %>
+
+
+
+    <div class="step_embeddings_html">
+        <% _(embeddings).filter(function(embedding){return embedding.mime_type == "text/html"}).forEach(function(embedding) { %>
+        <div class="embedding_html"><%= new Buffer(embedding.data , 'base64').toString("utf-8") %></div>
+        <% }); %>
+    </div>
+
+    <div class="step_embeddings_bilder">
+        <% _(embeddings).filter(function(embedding){return embedding.mime_type == "image/png"}).forEach(function(embedding) { %>
+        <div class="embeddings_bilde"><img src="data:image/png;base64,<%= embedding.data %>"/><%= embedding.mime_type %></div>
+        <% }); %>
+    </div>
 </div>
